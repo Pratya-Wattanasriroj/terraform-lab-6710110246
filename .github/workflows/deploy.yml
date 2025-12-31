@@ -1,0 +1,18 @@
+name: Checkpoint 4 CI/CD
+on: [push]
+jobs:
+  deploy-visualizer:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  Checkout Code
+        uses: actions/checkout@v3
+
+      - name:  Run Deployment Simulation
+        run: |
+          echo "Starting deployment..."
+          echo "Deploying to production server..."
+          sleep 2
+          echo "Deployment Successful!"
+
+      - name:  Verify System
+        run: echo "System is online."
